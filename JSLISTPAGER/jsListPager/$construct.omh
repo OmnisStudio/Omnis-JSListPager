@@ -1,0 +1,21 @@
+;  Enter your initialization code here
+
+Do iComplexGridList.$define(iComplexGridCol)
+For lCount from 1 to 50 step 1
+	Do iComplexGridList.$add(con('Complex Grid Line ',lCount))
+End For
+
+Do iDataGridList.$define(iDataGridCol)
+For lCount from 1 to 20 step 1
+	Do iDataGridList.$add(con('Data Grid Line ',lCount))
+End For
+
+Do iList.$define(iListCol)
+For lCount from 1 to 20 step 1
+	Do iList.$add(con('List Line ',lCount))
+End For
+
+Do iNativeList.$define(iTextCol1,iTextCol2,iAccessoryType,iAccessoryContent,iAccessoryValueCol,iImagePath)
+For lCount from 1 to 20 step 1
+	Do iNativeList.$add('Native List',con('Line ',lCount),kJSNativeListAccessoryTypeDisclosure,'',,)
+End For

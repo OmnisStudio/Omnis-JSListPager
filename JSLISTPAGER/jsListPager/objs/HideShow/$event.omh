@@ -1,0 +1,18 @@
+On evClick
+	If iShowListPagers
+		Do $cinst.$objs.ComplexGrid.$pagesize.$assign(0)
+		Do $cinst.$objs.Datagrid.$pagesize.$assign(0)
+		Do $cinst.$objs.List.$pagesize.$assign(0)
+		Do $cinst.$objs.NativeList.$pagesize.$assign(0)
+		
+		Do $cinst.$objs.HideShow.$text.$assign('Show List Pagers')
+	Else
+		Do $cinst.$objs.ComplexGrid.$pagesize.$assign(5)
+		Do $cinst.$objs.Datagrid.$pagesize.$assign(5)
+		Do $cinst.$objs.List.$pagesize.$assign(6)
+		Do $cinst.$objs.NativeList.$pagesize.$assign(5)
+		
+		Do $cinst.$objs.HideShow.$text.$assign('Hide List Pagers')
+	End If
+	
+	Calculate iShowListPagers as not(iShowListPagers)
